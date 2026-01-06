@@ -1,8 +1,11 @@
 import React from 'react'
+import Footer from './Footer'
 
 const Watchlist = () => {
   return (
-    <div>Watchlist</div>
+    <div>Watchlist
+      <Footer></Footer>
+    </div>
   )
 }
 
