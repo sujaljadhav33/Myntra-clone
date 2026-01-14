@@ -1,18 +1,22 @@
 import Footer from './Footer'
 import React, { useContext } from "react";
 import Appdata from "../../src/DataProvider.jsx";
+import { useCart } from '../CartProvider.jsx';
+
 
 const Kids = () => {
   const { kidsdata } = useContext(Appdata);
+    const { addToCart } = useCart();
+  
 
     return (
     <div className="flex flex-col items-center">
       
       {/* Products Section */}
       <div className="flex flex-wrap justify-center gap-5 mt-10 p-5">
-        {kidsdata.map((item, index) => (
+        {kidsdata.map((item) => (
           <div
-            key={index}
+            key={kidsdata.id}
             className="flex flex-col items-center p-5 border-2 border-gray-200 rounded-lg hover:shadow-lg"
           >
             {/* Image */}
@@ -28,7 +32,7 @@ const Kids = () => {
               <div className="mt-2">
                 <button
                   className="border px-3 py-1 bg-blue-500 text-white rounded-sm cursor-pointer"
-                  onClick={() => alert("Product added to cart")}
+                  onClick={() => addToCart(item)}
                 >
                   Add Cart
                 </button>

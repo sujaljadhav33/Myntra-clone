@@ -1,18 +1,21 @@
 import Footer from './Footer'
 import Appdata from "../../src/DataProvider.jsx";
 import { useContext } from 'react';
+import { useCart } from '../CartProvider.jsx';
 
 
 const Genz = () => {
   const { mensData ,WomensData } = useContext(Appdata);
+    const { addToCart } = useCart();
+  
   return (
     <div className="flex flex-col items-center">
       
       {/* Products Section */}
       <div className="flex flex-wrap justify-center gap-5 mt-10 p-5">
-        {mensData.map((item, index) => (
+        {mensData.map((item) => (
           <div
-            key={index}
+            key={item.id}
             className="flex flex-col items-center p-5 border-2 border-gray-200 rounded-lg hover:shadow-lg"
           >
             {/* Image */}
@@ -28,7 +31,7 @@ const Genz = () => {
               <div className="mt-2">
                 <button
                   className="border px-3 py-1 bg-blue-500 text-white rounded-sm cursor-pointer"
-                  onClick={() => alert("Product added to cart")}
+                  onClick={() => addToCart(item)}
                 >
                   Add Cart
                 </button>
@@ -45,9 +48,9 @@ const Genz = () => {
       </div>
       {/* womens data start here */}
       <div className="flex flex-wrap justify-center gap-5 mt-10 p-5">
-        {WomensData.map((item, index) => (
+        {WomensData.map((item) => (
           <div
-            key={index}
+            key={WomensData.id}
             className="flex flex-col items-center p-5 border-2 border-gray-200 rounded-lg hover:shadow-lg"
           >
             {/* Image */}
@@ -59,11 +62,10 @@ const Genz = () => {
             <div className="text-center">
               <p className="font-semibold">{item.Name}</p>
               <p>₹{item.price}</p>
-
               <div className="mt-2">
                 <button
                   className="border px-3 py-1 bg-blue-500 text-white rounded-sm cursor-pointer"
-                  onClick={() => alert("Product added to cart")}
+                  onClick={() => addToCart(item)}
                 >
                   Add Cart
                 </button>
