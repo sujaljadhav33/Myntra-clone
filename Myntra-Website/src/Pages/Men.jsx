@@ -1,42 +1,54 @@
-import React, { useContext } from 'react'
-import Footer from './Footer'
-import MensData, { mensPageData } from '../MensData'
+import React, { useContext } from "react";
+import Footer from "./Footer";
+import Appdata from "../../src/DataProvider.jsx";
 
 const Men = () => {
-
-  const page = useContext(mensPageData);
+  
+  const { mensData } = useContext(Appdata);
 
   return (
-    <div className='justify-center flex items-center flex-col '>
-      {<div className='flex gap-1 justify-around w-full'>
-        
-        <div className='flex flex-wrap justify-center items-center mt-10'>
-          {page.map((e) => {
-          return (
-            <div className='flex flex-col justify-center items-center m-5 p-5 border-2 border-gray-200 rounded-lg hover:shadow-lg'>
+    <div className="flex flex-col items-center">
+      
+      {/* Products Section */}
+      <div className="flex flex-wrap justify-center gap-5 mt-10 p-5">
+        {mensData.map((item, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center p-5 border-2 border-gray-200 rounded-lg hover:shadow-lg"
+          >
+            {/* Image */}
+            <div className="h-60 w-60 flex justify-center items-center overflow-hidden mb-3">
+              <img src={item.Image} alt={item.Name} />
+            </div>
 
-              {/* image div start */}
-              <div className='h-60 w-60 flex justify-center items-center mb-3 overflow-hidden'>
-                <img src={e.Image} alt={e.Name} className='' />
-              </div>
-              <div className='text-center'>
-                <p>{e.Name}</p>
-                <p>{e.price}</p>
-                <button className='border px-1 py-1 cursor-pointer bg-blue-500 text-white rounded-sm'>Add Cart</button>
+            {/* Info */}
+            <div className="text-center">
+              <p className="font-semibold">{item.Name}</p>
+              <p>₹{item.price}</p>
+
+              <div className="mt-2">
+                <button
+                  className="border px-3 py-1 bg-blue-500 text-white rounded-sm cursor-pointer"
+                  onClick={() => alert("Product added to cart")}
+                >
+                  Add Cart
+                </button>
+
+                &nbsp;
+
+                <button className="border px-3 py-1 bg-emerald-700 text-white rounded-sm">
+                  Buy Now
+                </button>
               </div>
             </div>
-          );
-        })}
-        </div>
+          </div>
+        ))}
+      </div><br />
 
-
-      </div>
-      }
-
+      {/* Footer */}
       <Footer />
-      {/* main div closing here */}
     </div>
-  )
-}
+  );
+};
 
-export default Men
+export default Men;

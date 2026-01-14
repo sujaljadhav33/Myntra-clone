@@ -26,10 +26,8 @@ const Homee = () => {
           <span className="font-bold text-4xl text-amber-400"> 50% OFF</span>
           <br />
           on your very first order.
-          <br /><br />
-          <button className="text-xl bg-amber-900 p-2 rounded-sm text-white active:bg-amber-700">
-            Shop Now
-          </button>
+          <br />
+          
         </p>
 
         <Link>
