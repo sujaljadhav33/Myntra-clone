@@ -32,6 +32,7 @@ const Bag = () => {
             <div className="flex-1 text-center sm:text-left">
               <p className="font-semibold">{item.Name}</p>
               <p>₹{item.price}</p>
+              <p>{item.qty}</p>
             </div>
 
             {/* Remove Button */}
