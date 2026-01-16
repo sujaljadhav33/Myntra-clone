@@ -9,4 +9,4 @@ const Watchlist = () => {
   )
 }
 
-export default Watchlist
+export default Watchlist;

@@ -17,7 +17,6 @@ export const CartProvider = ({ children }) => {
             : item
         );
       }
-
       return [...prev, { ...product, qty: 1 }];
     });
   };
@@ -31,5 +30,4 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>
   );
 };
-
 export const useCart = () => useContext(CartContext);
