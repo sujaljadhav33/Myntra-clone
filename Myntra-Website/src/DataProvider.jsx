@@ -97,14 +97,14 @@ export const DataProvider = ({ children }) => {
 
 
   const studio = [
-  { id: 35, Image: "/Studio/st1.webp", Name: " electric Equipments", price: 1799 },
-  { id: 36, Image: "/Studio/st2.webp", Name: " electric Equipments", price: 1799 },
-  { id: 37, Image: "/Studio/st3.webp", Name: " electric Equipments", price: 1799 },
-  { id: 38, Image: "/Studio/st4.webp", Name: " electric Equipments", price: 1799 },
-  { id: 39, Image: "/Studio/st5.webp", Name: " electric Equipments", price: 1799 },
-  { id: 40, Image: "/Studio/st6.webp", Name: " electric Equipments", price: 1799 },
-  { id: 41, Image: "/Studio/st7.webp", Name: " electric Equipments", price: 1799 },
-  { id: 42, Image: "/Studio/st8.webp", Name: " electric Equipments", price: 1799 },
+  { id: 35, Image: "/Studio/st1.webp", Name: " electronics", price: 1799 },
+  { id: 36, Image: "/Studio/st2.webp", Name: " electronics", price: 1799 },
+  { id: 37, Image: "/Studio/st3.webp", Name: " electronics", price: 1799 },
+  { id: 38, Image: "/Studio/st4.webp", Name: " electronics", price: 1799 },
+  { id: 39, Image: "/Studio/st5.webp", Name: " electronics", price: 1799 },
+  { id: 40, Image: "/Studio/st6.webp", Name: " electronics", price: 1799 },
+  { id: 41, Image: "/Studio/st7.webp", Name: " electronics", price: 1799 },
+  { id: 42, Image: "/Studio/st8.webp", Name: " electronics", price: 1799 },
 ];
 
 
@@ -113,7 +113,7 @@ export const DataProvider = ({ children }) => {
       {children}
     </Appdata.Provider>
   );
-};
+}
 
-// 3️⃣ Export Context (VERY IMPORTANT)
+// 3️ Export Context
 export default Appdata;
