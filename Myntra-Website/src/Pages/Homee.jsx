@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, Outlet } from 'react-router-dom'
 import Footer from './Footer'
 
 const Homee = () => {
@@ -30,7 +30,7 @@ const Homee = () => {
           
         </p>
 
-        <Link>
+        <Link to="/men">
           <img
             src="/Images/product-images/heroimage.png"
             alt="hero"
@@ -41,12 +41,12 @@ const Homee = () => {
 
       {/* Categories */}
       <div className="font-bold flex justify-around flex-wrap gap-2 text-center">
-        <Link className="min-w-[120px] lg:w-[180px] min-h-[180px] bg-[url('/Images/product-images/menspant.webp')] bg-cover bg-center rounded-xl"></Link>
-        <Link className="min-w-[120px] lg:w-[180px] min-h-[180px] bg-[url('/Images/product-images/mensTshirt.webp')] bg-cover bg-center rounded-xl"></Link>
-        <Link className="min-w-[120px] lg:w-[180px] min-h-[180px] bg-[url('/Images/Watch1.webp')] bg-cover bg-center rounded-xl"></Link>
-        <Link className="min-w-[120px] lg:w-[180px] min-h-[180px] bg-[url('/Images/mens-Shirt.webp')] bg-cover bg-center rounded-xl"></Link>
-        <Link className="min-w-[120px] lg:w-[180px] min-h-[180px] bg-[url('/Images/Shorts.webp')] bg-cover bg-center rounded-xl"></Link>
-        <Link className="min-w-[120px] lg:w-[180px] min-h-[180px] bg-[url('/Images/shoes.webp')] bg-cover bg-center rounded-xl"></Link>
+        <Link to="/men" className="min-w-[120px] lg:w-[180px] min-h-[180px] bg-[url('/Images/product-images/menspant.webp')] bg-cover bg-center rounded-xl"></Link>
+        <Link to="/men" className="min-w-[120px] lg:w-[180px] min-h-[180px] bg-[url('/Images/product-images/mensTshirt.webp')] bg-cover bg-center rounded-xl"></Link>
+        <Link to="/men" className="min-w-[120px] lg:w-[180px] min-h-[180px] bg-[url('/Images/Watch1.webp')] bg-cover bg-center rounded-xl"></Link>
+        <Link to="/genz" className="min-w-[120px] lg:w-[180px] min-h-[180px] bg-[url('/Images/mens-Shirt.webp')] bg-cover bg-center rounded-xl"></Link>
+        <Link to="/men" className="min-w-[120px] lg:w-[180px] min-h-[180px] bg-[url('/Images/Shorts.webp')] bg-cover bg-center rounded-xl"></Link>
+        <Link to="/men" className="min-w-[120px] lg:w-[180px] min-h-[180px] bg-[url('/Images/shoes.webp')] bg-cover bg-center rounded-xl"></Link>
       </div>
 
       <Footer />

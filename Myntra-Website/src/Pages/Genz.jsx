@@ -76,7 +76,7 @@ const Genz = () => {
               <p>₹{item.price}</p>
               <div className="mt-2">
                 <button
-                  className="border px-3 py-1 bg-blue-500 text-white rounded-sm cursor-pointer"
+                  className="border px-3 py-1 bg-blue-500 text-white rounded-sm cursor-pointer active:bg-amber-400"
                   onClick={() => addToCart(item)}
                 >
                   Add Cart
