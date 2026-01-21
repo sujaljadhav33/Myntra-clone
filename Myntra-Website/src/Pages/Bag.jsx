@@ -1,5 +1,6 @@
 import React from "react";
 import { useCart } from "../CartProvider";
+import { Link } from "react-router-dom";
 
 const Bag = () => {
   const { cart, removeFromCart } = useCart();
@@ -7,7 +8,7 @@ const Bag = () => {
   return (
     <div className="p-4 sm:p-6">
       <h1 className="text-2xl font-bold mb-5 text-center sm:text-left">
-        My Cart
+        My Cart <span><Link to={'/'} className=' m-10 bg-white p-1 rounded-sm font-bold text-sm text-black w-fit border bg-amber-100'>BACK HOME</Link></span>
       </h1>
 
       {cart.length === 0 && (

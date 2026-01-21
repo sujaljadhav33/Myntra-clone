@@ -16,6 +16,7 @@ import Profile from './Pages/Profile'
 import Watchlist from './Pages/Watchlist'
 import Bag from './Pages/Bag'
 import PageNotFound from './Pages/PageNotFound'
+import Auth from './Pages/Auth'
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
           <Route path='/bag' element={<Bag/>}/>
           <Route path='/watchlist' element={<Watchlist/>}/>
           <Route path='*' element={<PageNotFound/>}/>
+          <Route path='/Auth' element={<Auth/>}/>
         </Routes>
 
       </div>

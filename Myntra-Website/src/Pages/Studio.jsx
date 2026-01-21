@@ -51,7 +51,7 @@ const Studio = () => {
 
                 &nbsp;
 
-                <button className="border px-3 py-1 bg-emerald-700 text-white rounded-sm">
+                <button className="border px-3 py-1 bg-emerald-700 text-white rounded-sm active:bg-amber-600">
                   Buy Now
                 </button>
               </div>
