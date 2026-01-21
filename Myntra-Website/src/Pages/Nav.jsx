@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import logo from "../../public/Images/Myntra.webp"
 import {
   Search,
   User,
@@ -17,7 +18,7 @@ const Nav = () => {
 
         {/* Logo */}
         <img
-          src="../../public/Images/Myntra.webp"
+          src={logo}
           alt="logo"
           className="h-10 object-contain"
         />
